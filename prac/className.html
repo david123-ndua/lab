@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Class Name</title>
+</head>
+<body>
+
+    <p class="intro">First  paragraph.</p>
+    <p class="intro">Second  paragraph.</p>
+    <p class="intro">Third  paragraph.</p>
+    <p>This paragraph is the last intro paragraph.</p>
+
+    <hr>
+
+    <p id="demo"></p>
+
+    <script>
+        var y = document.getElementsByClassName("intro");
+
+        document.getElementById("demo").innerHTML =
+        "The first intro paragraph is: " + y[0].innerHTML;
+    </script>
+
+</body>
+</html>

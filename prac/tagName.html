@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tag Name</title>
+</head>
+<body>
+
+    <p>Data Structures are the building blocks of programming.</p>
+    <p>We live under illusions.</p>
+
+    <hr>
+
+    <p id="demo"></p>
+
+    <script>
+        var x = document.getElementsByTagName("p");
+
+        document.getElementById("demo").innerHTML =
+        "The first paragraph is: " + x[0].innerHTML;
+    </script>
+
+</body>
+</html>

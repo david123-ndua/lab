@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Forms Example</title>
+
+    <script>
+        function myFunction()
+        {
+            var x = document.forms["myForm"];
+            var text = "";
+            var i;
+
+            for (i = 0; i < x.length; i++)
+            {
+                text += x.elements[i].value + "<br>";
+            }
+
+            document.getElementById("demo").innerHTML = text;
+        }
+    </script>
+
+</head>
+<body>
+
+    <form name="myForm">
+        First Name:
+        <input type="text" name="fname"><br><br>
+
+        Last Name:
+        <input type="text" name="lname"><br><br>
+
+        Course:
+        <input type="text" name="course"><br><br>
+
+        <button type="button" onclick="myFunction()">
+            Display Details
+        </button>
+    </form>
+
+    <p id="demo"></p>
+
+</body>
+</html>

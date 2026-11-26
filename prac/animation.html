@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EAGLE - Anime.js Animation</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #050816;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            gap: 15px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 45px;
+            font-weight: bold;
+            color: white;
+
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+
+            user-select: none;
+        }
+
+        .red {
+            background: #ef4444;
+        }
+
+        .blue {
+            background: #3b82f6;
+        }
+
+        .green {
+            background: #22c55e;
+        }
+
+        .yellow {
+            background: #eab308;
+        }
+
+        .purple {
+            background: #a855f7;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box red">E</div>
+        <div class="box blue">A</div>
+        <div class="box green">G</div>
+        <div class="box yellow">L</div>
+        <div class="box purple">E</div>
+    </div>
+
+    <!-- Anime.js 2.0.2 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+    <script>
+
+        console.log("Anime.js loaded:", typeof anime);
+
+        anime({
+            targets: '.box',
+
+            translateY: [-80, 0],
+
+            scale: [0.7, 1],
+
+            rotate: [-20, 0],
+
+            delay: function (el, i) {
+                return i * 250;
+            },
+
+            duration: 1000,
+
+            easing: 'easeInOutSine',
+
+            direction: 'alternate',
+
+            loop: true
+
+        });
+
+    </script>
+
+</body>
+
+</html>
